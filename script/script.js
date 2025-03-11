@@ -1,7 +1,7 @@
 // 🔹 Cargar videos e imágenes desde JSON
 async function loadData() {
     try {
-        let response = await fetch('datos.json');
+        let response = await fetch('../recursos/datos.json'); // Ruta ajustada
         let data = await response.json();
 
         // Cargar videos
