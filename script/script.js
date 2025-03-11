@@ -62,7 +62,7 @@ function openSideWindow(option) {
             <p><strong>📞 Teléfono:</strong> <a href="tel:+593992323613">+593 99 232 3613</a></p>
             <p><strong>📧 Email:</strong> <a href="mailto:harolzambrano2005@gmail.com">harolzambrano2005@gmail.com</a></p>
             <p><strong>💬 WhatsApp:</strong> <a href="https://w.app/l469ab" target="_blank">Haz clic aquí</a></p>
-            <img src="/recursos/codigo.jpg" alt="Código QR">
+            <img src="/recursos/codigo.jpg" alt="Código QR" class="zetah-img">
         `;
     } else if (option === 'redes') {
         sideContent.innerHTML = `
