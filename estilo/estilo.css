@@ -368,7 +368,7 @@ iframe {
 /* ================= PIE DE PÁGINA ================= */
 .footer {
     margin-top: 20px;
-    padding: 15px 30px; 
+    padding: 15px 30px;
     background: #333;
     color: rgb(196, 196, 196);
     display: flex;
@@ -385,12 +385,14 @@ iframe {
     color: white;
     text-align: left;
     line-height: 1.8;
-    max-width: 300px; /* Limitar el ancho */
+    max-width: 300px;
+    /* Limitar el ancho */
 }
 
 /* Título del pie de página */
 .footer h1 {
-    font-size: 2rem; /* Usar una unidad relativa */
+    font-size: 2rem;
+    /* Usar una unidad relativa */
     color: rgb(229, 229, 229);
 }
 
@@ -398,8 +400,10 @@ iframe {
 .social-icons {
     margin-top: 10px;
     display: flex;
-    justify-content: center; /* Asegura que los íconos se centren */
-    width: 100%; /* Hace que ocupe todo el ancho disponible */
+    justify-content: center;
+    /* Asegura que los íconos se centren */
+    width: 100%;
+    /* Hace que ocupe todo el ancho disponible */
 }
 
 /* Estilos para los iconos pequeños */
@@ -414,7 +418,8 @@ iframe {
 
 .social-icon:hover {
     transform: scale(1.1);
-    opacity: 1; /* Vuelve los iconos completamente visibles al hacer hover */
+    opacity: 1;
+    /* Vuelve los iconos completamente visibles al hacer hover */
 }
 
 /* Imagen principal */
@@ -428,56 +433,73 @@ iframe {
 /* Para pantallas pequeñas */
 @media (max-width: 768px) {
     .footer {
-        padding: 20px 10px; /* Reducir el espacio en los lados */
-        flex-direction: column; /* Cambiar la dirección de los elementos para una mejor visualización */
-        text-align: center; /* Centrar el texto */
+        padding: 20px 10px;
+        /* Reducir el espacio en los lados */
+        flex-direction: column;
+        /* Cambiar la dirección de los elementos para una mejor visualización */
+        text-align: center;
+        /* Centrar el texto */
     }
 
     .footer-info {
-        text-align: center; /* Centrar el texto */
-        max-width: 100%; /* Ancho completo en pantallas pequeñas */
+        text-align: center;
+        /* Centrar el texto */
+        max-width: 100%;
+        /* Ancho completo en pantallas pequeñas */
     }
 
     .footer h1 {
-        font-size: 1.5rem; /* Ajustar el tamaño del título */
+        font-size: 1.5rem;
+        /* Ajustar el tamaño del título */
     }
 
     .social-icons {
         margin-top: 10px;
-        justify-content: center; /* Asegura que los íconos estén centrados */
+        justify-content: center;
+        /* Asegura que los íconos estén centrados */
     }
 
     .social-icon {
-        width: 25px; /* Reducir el tamaño de los iconos */
+        width: 25px;
+        /* Reducir el tamaño de los iconos */
         height: 25px;
-        margin: 5px; /* Ajustar el espacio entre iconos */
+        margin: 5px;
+        /* Ajustar el espacio entre iconos */
     }
 }
 
 /* Para pantallas muy pequeñas (móviles) */
 @media (max-width: 480px) {
     .footer h1 {
-        font-size: 1rem; /* Reducir aún más el tamaño del título */
+        font-size: 1rem;
+        /* Reducir aún más el tamaño del título */
     }
 
     .footer-info {
-        font-size: 0.8rem; /* Reducir el tamaño del texto */
-        line-height: 1.4; /* Ajustar la altura de línea para que el texto sea más compacto */
+        font-size: 0.8rem;
+        /* Reducir el tamaño del texto */
+        line-height: 1.4;
+        /* Ajustar la altura de línea para que el texto sea más compacto */
     }
 
     .social-icon {
-        width: 25px; /* Reducir aún más el tamaño de los iconos */
+        width: 25px;
+        /* Reducir aún más el tamaño de los iconos */
         height: 25px;
-        margin: 4px; /* Reducir el margen entre los iconos */
+        margin: 4px;
+        /* Reducir el margen entre los iconos */
     }
 
     .footer {
-        padding: 10px 5px; /* Reducir el espacio del padding para hacerlo más bajo */
-        min-height: 60px; /* Definir una altura mínima */
+        padding: 10px 5px;
+        /* Reducir el espacio del padding para hacerlo más bajo */
+        min-height: 60px;
+        /* Definir una altura mínima */
     }
 
-    .footer-info, .social-icons {
-        margin-bottom: 5px; /* Reducir el margen inferior */
+    .footer-info,
+    .social-icons {
+        margin-bottom: 5px;
+        /* Reducir el margen inferior */
     }
 }
-

@@ -1,7 +1,7 @@
 // 🔹 Cargar videos e imágenes desde JSON
 async function loadData() {
     try {
-        let response = await fetch('../recursos/datos.json'); // Ruta ajustada
+        let response = await fetch('recursos/datos.json'); // Ruta ajustada
         let data = await response.json();
 
         // Cargar videos
@@ -50,7 +50,7 @@ function openSideWindow(option) {
     if (option === 'quien') {
         sideContent.innerHTML = `
             <h2>¿Quién es ZetaH?</h2>
-            <img src="/recursos/harol.png" alt="ZetaH" class="zetah-img">
+            <img src="recursos/harol.png" alt="ZetaH" class="zetah-img">
             <p>¡Hey! Soy Harol Joshue, pero en el mundo artístico me conocen como ZetaH. Soy de Ibarra, Ecuador.</p>
             <p>Apasionado por la música y el mundo visual: cine, fotografía y edición. Aprendiz de manera autónoma, siempre explorando nuevas ideas.</p>
             <p>Si te interesa lo que hago, quédate por aquí y contáctame. 🔥</p>
@@ -62,12 +62,12 @@ function openSideWindow(option) {
             <p><strong>📞 Teléfono:</strong> <a href="tel:+593992323613">+593 99 232 3613</a></p>
             <p><strong>📧 Email:</strong> <a href="mailto:harolzambrano2005@gmail.com">harolzambrano2005@gmail.com</a></p>
             <p><strong>💬 WhatsApp:</strong> <a href="https://w.app/l469ab" target="_blank">Haz clic aquí</a></p>
-            <img src="/recursos/codigo.jpg" alt="Código QR" class="zetah-img">
+            <img src="recursos/codigo.jpg" alt="Código QR" class="zetah-img">
         `;
     } else if (option === 'redes') {
         sideContent.innerHTML = `
             <h2>Redes Sociales</h2>
-            <img src="/recursos/ico.png" alt="ZetaH" class="zetah-img">
+            <img src="recursos/ico.png" alt="ZetaH" class="zetah-img">
             <p>¡Sígueme y mira mi contenido!</p>
             <a href="https://www.instagram.com/haroljoshue/" target="_blank">📸 Instagram</a>
             <a href="https://www.facebook.com/Zambrano2005" target="_blank">📘 Facebook</a>
