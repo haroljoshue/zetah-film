@@ -152,7 +152,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.7);
-    margin-bottom: 10px;
+
 }
 
 .zetah-img,
@@ -357,19 +357,22 @@ iframe {
     margin-top: 20px;
     padding: 15px 30px;
     background: #333;
-    color: rgb(196, 196, 196);
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     flex-wrap: wrap;
     position: relative;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
     /* Necesario para el efecto de destellos */
 }
 
+
+
 /* Información del pie de página */
 .footer-info {
-    color: white;
+    color: rgb(200, 200, 200);
     text-align: left;
     line-height: 1.8;
     max-width: 300px;
@@ -380,7 +383,7 @@ iframe {
 .footer h1 {
     font-size: 2rem;
     /* Usar una unidad relativa */
-    color: rgb(229, 229, 229);
+    color: rgb(255, 255, 255);
 }
 
 /* Contenedor de los íconos */
@@ -505,5 +508,148 @@ iframe {
     .social-icons {
         margin-bottom: 5px;
         /* Reducir el margen inferior */
+    }
+}
+
+.video-container {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.titulo {    
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 900; /* Asegura que el texto sea grueso */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Asegura que el video quede detrás de la franja y el título */
+}
+
+.franja-negra {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #121212;
+    z-index: 5;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Capa de estrellas */
+.franja-negra::before,
+.franja-negra::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: parpadeo 3s infinite alternate ease-in-out;
+}
+
+/* Estrellas distribuidas por toda la franja */
+.franja-negra::before {
+    background-image: 
+        radial-gradient(2px 2px at 5% 10%, white, transparent),
+        radial-gradient(2px 2px at 15% 25%, white, transparent),
+        radial-gradient(3px 3px at 25% 35%, white, transparent),
+        radial-gradient(2px 2px at 35% 50%, white, transparent),
+        radial-gradient(3px 3px at 45% 65%, white, transparent),
+        radial-gradient(1.5px 1.5px at 55% 75%, white, transparent),
+        radial-gradient(2.5px 2.5px at 65% 85%, white, transparent),
+        radial-gradient(3px 3px at 75% 95%, white, transparent),
+        radial-gradient(2px 2px at 85% 20%, white, transparent),
+        radial-gradient(1.5px 1.5px at 95% 30%, white, transparent),
+        radial-gradient(3px 3px at 10% 40%, white, transparent),
+        radial-gradient(2px 2px at 20% 55%, white, transparent),
+        radial-gradient(2.5px 2.5px at 30% 70%, white, transparent),
+        radial-gradient(3px 3px at 40% 85%, white, transparent),
+        radial-gradient(2px 2px at 50% 90%, white, transparent),
+        radial-gradient(1.8px 1.8px at 60% 15%, white, transparent),
+        radial-gradient(2.2px 2.2px at 70% 30%, white, transparent),
+        radial-gradient(2.7px 2.7px at 80% 45%, white, transparent),
+        radial-gradient(3px 3px at 90% 60%, white, transparent),
+        radial-gradient(1.5px 1.5px at 95% 80%, white, transparent);
+}
+
+/* Segunda capa con más estrellas en movimiento */
+.franja-negra::after {
+    background-image: 
+        radial-gradient(1.5px 1.5px at 3% 8%, white, transparent),
+        radial-gradient(2px 2px at 18% 22%, white, transparent),
+        radial-gradient(3px 3px at 28% 40%, white, transparent),
+        radial-gradient(2px 2px at 38% 58%, white, transparent),
+        radial-gradient(2.5px 2.5px at 48% 72%, white, transparent),
+        radial-gradient(2px 2px at 58% 85%, white, transparent),
+        radial-gradient(3px 3px at 68% 20%, white, transparent),
+        radial-gradient(2px 2px at 78% 35%, white, transparent),
+        radial-gradient(1.8px 1.8px at 88% 50%, white, transparent),
+        radial-gradient(2.5px 2.5px at 95% 70%, white, transparent);
+    animation: movimiento 6s infinite linear alternate;
+    opacity: 0.6;
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Animación de movimiento suave */
+@keyframes movimiento {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-20px); }
+}
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .video-container {
+        height: 40vh;
+    }
+    
+    .video-background {
+        height: 40vh;
+    }
+
+    .titulo {
+        font-size: 1.3em;
+    }
+
+    .franja-negra {
+        height: 80px; /* Reduce la altura de la franja negra en móviles */
     }
 }
