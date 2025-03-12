@@ -79,5 +79,6 @@ function openSideWindow(option) {
 }
 
 function closeSideWindow() {
-    document.getElementById('side-window').style.right = "-50%";
+    var sideWindow = document.getElementById('side-window');
+    sideWindow.style.right = "-100%"; // Ocultar completamente la ventana lateral
 }

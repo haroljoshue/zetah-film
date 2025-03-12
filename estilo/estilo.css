@@ -104,7 +104,7 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 100%;
+    width: 40%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
     color: rgb(196, 196, 196);
@@ -115,6 +115,7 @@ body {
     line-height: 1.8;
     font-size: 17px;
     font-family: Arial, sans-serif;
+    overflow-y: auto; /* Permitir desplazamiento vertical */
 }
 
 .side-window.open {
@@ -213,7 +214,6 @@ h2 {
         font-size: 14px;
     }
 }
-
 /* ================= TITULOS ================= */
 h1 {
     font-family: 'Monument Extended', sans-serif;
@@ -225,6 +225,19 @@ h1 {
     margin: 80px 0 90px;
 }
 
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+        /* Reducir el tamaño de la fuente */
+        margin: 20px 0 30px;
+        /* Reducir el margen superior e inferior */
+        letter-spacing: 1px;
+        /* Reducir el espaciado entre letras */
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+        /* Ajustar la sombra del texto */
+    }
+}
 /* ================= CONTENIDO ================= */
 .content {
     padding: 20px;
@@ -407,7 +420,7 @@ iframe {
 /* Para pantallas pequeñas */
 @media (max-width: 768px) {
     .footer {
-        padding: 20px 10px;
+        padding: 10px 10px;
         /* Reducir el espacio en los lados */
         flex-direction: column;
         /* Cambiar la dirección de los elementos para una mejor visualización */
@@ -416,46 +429,63 @@ iframe {
     }
 
     .footer-info {
-        margin-top: 50px;
+        margin-top: 20px;
         text-align: center;
         /* Centrar el texto */
         max-width: 100%;
-        max-height: 0px;
         /* Ancho completo en pantallas pequeñas */
     }
 
     .footer h1 {
         font-size: 1.5rem;
         /* Ajustar el tamaño del título */
+        margin-bottom: 10px;
+        /* Reducir el margen inferior */
     }
 
     .social-icons {
-        margin-top: 0px;
+        margin-top: 10px;
         justify-content: center;
         /* Asegura que los íconos estén centrados */
     }
 
     .social-icon {
-        width: 20px;
+        width: 25px;
         /* Reducir el tamaño de los iconos */
-        height: 20px;
+        height: 25px;
         margin: 5px;
         /* Ajustar el espacio entre iconos */
+    }
+
+    .footer-image img {
+        width: 80px;
+        /* Reducir el tamaño de la imagen */
     }
 }
 
 /* Para pantallas muy pequeñas (móviles) */
 @media (max-width: 480px) {
+    .footer {
+        padding: 5px 5px;
+        /* Reducir el espacio del padding para hacerlo más bajo */
+        flex-direction: column;
+        /* Asegurar que los elementos se apilen verticalmente */
+    }
+
     .footer h1 {
-        font-size: 0.7rem;
-        /* Reducir aún más el tamaño del título */
+        font-size: 1rem;
+        /* Reducir el tamaño del título */
+        margin-bottom: 35px;
+        /* Reducir el margen inferior */
     }
 
     .footer-info {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         /* Reducir el tamaño del texto */
         line-height: 1.4;
         /* Ajustar la altura de línea para que el texto sea más compacto */
+        margin-bottom: 5px;
+        /* Reducir el margen inferior */
     }
 
     .social-icon {
@@ -468,14 +498,7 @@ iframe {
 
     .footer-image img {
         width: 60px;
-        transition: opacity 0.6s ease-in-out;
-    }
-
-    .footer {
-        padding: 10px 5px;
-        /* Reducir el espacio del padding para hacerlo más bajo */
-        min-height: 40px;
-        /* Definir una altura mínima */
+        /* Reducir el tamaño de la imagen */
     }
 
     .footer-info,
