@@ -1,7 +1,7 @@
 // 🔹 Cargar videos e imágenes desde JSON
 async function loadData() {
     try {
-        let response = await fetch('./recursos/datos.json'); // Ruta ajustada
+        let response = await fetch('./recursos/datos.json?v=2'); // <- agregado ?v=2
         let data = await response.json();
 
         // Cargar videos
@@ -29,6 +29,7 @@ async function loadData() {
         console.error("Error cargando datos:", error);
     }
 }
+
 
 // Llamar a la función cuando se cargue la página
 document.addEventListener("DOMContentLoaded", loadData);
